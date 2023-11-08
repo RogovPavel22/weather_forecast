@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,58 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="hweder__wrapper container">
+            <div class="header__logo">
+                <h1 class="header__logo-title">Погода</h1>
+                <span class="header__time">16:00</span>
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item active">Сегодня</li>
+                    <li class="header__nav-item">Завтра</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__wrapper container">
+            <form class="search-city">
+                <div class="search-city__wrapper">
+                    <input class="search-city__add" type="text" placeholder="Введите город...">
+                </div>
+            </form>
+            <div class="weather-card">
+                <div class="weather-card__head">
+                    <h2 class="weather-card__head-city">Москва</h2>
+                    <p class="weather-card__head-date">Aug 23,  Tue</p>
+                </div>
+                <div class="weather-card__info">
+                    <div class="weather-card__info-temp">
+                        <p class="weather-card__info-temp-item">27°C</p>
+                    </div>
+                    <div class="weather-card__info-img">
+                        <img class="weather-card__info-img-item" src="./img/weather_img.png" alt="wether">
+                    </div>
+                </div>
+                <div class="weather-card__foot">
+                    <div class="weather-card__foot-item">
+                        <p class="weather-card__foot-info weather-card__foot-info-upper">Влажность<br><span id="Humidity">99%</span></p>
+                    </div>
+                    <div class="weather-card__foot-item">
+                        <p class="weather-card__foot-info weather-card__foot-info-upper">Видимость<br><span id="Visiblity">8km</span></p>
+                    </div>
+                    <div class="weather-card__foot-item">
+                        <p class="weather-card__foot-info weather-card__foot-info-upper">Давление воздуха<br><span id="Pressure">1005hPa</span></p>
+                    </div>
+                    <div class="weather-card__foot-item">
+                        <p class="weather-card__foot-info weather-card__foot-info-upper">Ветер<br><span id="Wind">2mph</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="./main.js"></script>
 </body>
 </html>

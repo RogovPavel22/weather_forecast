@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #252323;
+    color: #FFF;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* -------HEADER------- */
+
+.header {
+    padding-top: 31px;
+}
+
+.hweder__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.header__logo {
+    padding-left: 64px;
+    position: relative;
+}
+
+.header__logo-title {
+    font-size: 69px;
+    font-weight: 400;
+}
+
+.header__logo-title::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: -24px;
+    background: url(../img/Logo.png) no-repeat;
+    background-size: cover;
+    width: 67px;
+    height: 48px;
+}
+
+.header__time {
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.header__nav-list {
+    display: flex;
+    margin-right: 100px;
+}
+.header__nav-item {
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 36px;
+}
+.active {
+    position: relative;
+    font-weight: 700;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #695D5D;
+}
+
+
+/* -------MAIN------- */
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.search-city__wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: #D9D9D9;
+    width: 711px;
+    height: 66px;
+    margin-bottom: 50px;
+}
+
+.search-city__add {
+    display: block;
+    color: #524E4E;
+    width: 552px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: 300;
+    border: none;
+    background-color: inherit;
+    outline: none;
+}
+
+.search-city__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    background: url(../img/icon\ _search_.svg) no-repeat;
+    background-size: cover;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 28px 5px;
+    border-radius: 32px;
+    width: 817px;
+    background: linear-gradient(113deg, #AD36CB 32.23%, #333 67.37%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(255, 250, 250, 0.25), 0px 4px 4px 0px rgba(253, 245, 245, 0.25);
+}
+
+.weather-card__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 67px;
+}
+
+.weather-card__head-city {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.weather-card__head-date {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+.weather-card__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 84px;
+}
+
+.weather-card__info-temp {
+    position: relative;
+    padding-left: 43px;
+}
+
+.weather-card__info-temp-item {
+    color: #F2F1F1;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.weather-card__info-img {
+    width: 96px;
+    height: 47px;
+}
+
+.weather-card__info-img-item {
+    width: 100%;
+}
+
+.weather-card__info-temp::before {
+    content: "";
+    position: absolute;
+    background: url(../img/icon\ _temperature_.svg) no-repeat;
+    background-size: cover;
+    width: 18px;
+    height: 62px;
+    left: 0;
+    top: 13px;
+}
+
+
+.weather-card__foot {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.weather-card__foot-info-upper {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.weather-card__foot-info {
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
