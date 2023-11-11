@@ -138,7 +138,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 67px;
+    margin-bottom: 47px;
 }
 
 .weather-card__head-city {
@@ -155,7 +155,7 @@ body {
 .weather-card__info {
     display: flex;
     align-items: center;
-    margin-bottom: 84px;
+    margin-bottom: 10px;
 }
 
 .weather-card__info-temp {
@@ -170,8 +170,8 @@ body {
 }
 
 .weather-card__info-img {
-    width: 96px;
-    height: 47px;
+    width: 64px;
+    height: 64px;
 }
 
 .weather-card__info-img-item {
@@ -189,6 +189,10 @@ body {
     top: 13px;
 }
 
+.weather-card__descr-weater {
+    font-size: 25px;
+    margin-bottom: 64px;
+}
 
 .weather-card__foot {
     display: flex;
@@ -198,14 +202,8 @@ body {
     padding: 0 30px;
 }
 
-.weather-card__foot-info-upper {
+.weather-card__foot-info {
     font-size: 20px;
     font-weight: 500;
-    text-transform: uppercase;
-}
-
-.weather-card__foot-info {
-    font-size: 22px;
-    text-transform: capitalize;
 }
 
