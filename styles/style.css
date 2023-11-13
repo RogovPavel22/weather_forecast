@@ -136,6 +136,61 @@ body {
     background-size: cover;
 }
 
+.search-city__chek {
+    display: none;
+}
+
+.search-city__temp {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    font-size: 25px;
+    line-height: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.search-city__temp-wrapper {
+    position: absolute;
+    padding-left: 105px;
+}
+
+.search-city__temp::before {
+    content: '';
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #bfc0c4;
+    position: absolute;
+    left: 40px;
+    top: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.search-city__temp::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #bfc0c4;
+    position: absolute;
+    left: 40px;
+    top: -5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.check-active::before {
+    background-color: #AD36CB;
+}
+
+.check-active::after {
+    background-color: #AD36CB;
+    left: 65px;
+}
+
 .weather-card {
     display: flex;
     flex-direction: column;
@@ -204,7 +259,7 @@ body {
     top: 13px;
 }
 
-.weather-card__descr-weater {
+.weather-card__descr-weather {
     font-size: 25px;
     margin-bottom: 64px;
 }
