@@ -72,7 +72,7 @@ $tempContainer.addEventListener('click', async () => {
 async function getWeather() {
 
     // Запрашиваем данные с сервера
-    const URL = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&lang=ru&days=2&q=${city}`;
+    const URL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&lang=ru&days=2&q=${city}`;
     const response = await fetch(URL);
     const data = await response.json();
     console.log(data)
