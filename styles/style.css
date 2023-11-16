@@ -52,7 +52,7 @@ body {
     font-weight: 600;
 }
 
-.header__nav-list {
+/* .header__nav-list {
     display: flex;
     margin-right: 100px;
 }
@@ -65,7 +65,7 @@ body {
 .active {
     position: relative;
     font-weight: 700;
-}
+} */
 
 .active::before {
     content: "";
@@ -79,6 +79,10 @@ body {
 
 
 /* -------MAIN------- */
+
+.main {
+    margin-top: -135px;
+}
 
 .main__wrapper {
     display: flex;

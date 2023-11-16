@@ -20,11 +20,10 @@ const $tempContainer = document.querySelector('.search-city__temp')
 
 // Создаю объект с даннными которые нужны будут для html
 let weatherData = {
-    name: "",
+    name: '',
     tempC: 0,
     tempF: 0,
     icon: '',
-    dayNight: 0,
     humidity: 0,
     visiblity: 0,
     pressure: 0,
@@ -87,7 +86,7 @@ async function getWeather() {
 
     // Присваиваю значения необходимых данных в изнчальный объект
     const {
-        current: {temp_c: tempC, temp_f: tempF, is_day: dayNight, humidity, vis_km: visiblity, pressure_mb: pressure, wind_kph: wind, last_updated, condition: {icon, text}},
+        current: {temp_c: tempC, temp_f: tempF, humidity, vis_km: visiblity, pressure_mb: pressure, wind_kph: wind, last_updated, condition: {icon, text}},
         location: {name}, 
         forecast: {forecastday}
     } = data;
@@ -97,7 +96,6 @@ async function getWeather() {
         tempC,
         tempF,
         icon,
-        dayNight,
         humidity,
         visiblity,
         pressure,
@@ -134,11 +132,8 @@ function addWeatherHtml() {
     };
     $cardDate.textContent = date.toLocaleString('ru', options);
     
-    // определяем и устанавливаем иконку погоды
-    let iconNumber = weatherData.icon.split('/').pop();
-    let day = 'day'
-    weatherData.dayNight == 0 ? day = 'night' : day = day;
-    $cardIconWeather.src = `./img/weather_icon/${day}/${iconNumber}`;
+    // Устанавливаем иконку погоды
+    $cardIconWeather.src = getImage(weatherData.icon);
 
     // Создаем карточки прогноза погоды
     let indexTime = +weatherData.time.split(':')[0]
@@ -154,13 +149,18 @@ function addWeatherHtml() {
             nextDay += 2
         }
 
-        let forecastIconNumber = forecastHour.condition.icon.split('/').pop();
         let forecastCityTemp = $chekTemp.checked ? forecastHour.temp_f : forecastHour.temp_c;
         
         $forecastWrapper.insertAdjacentHTML("beforeend", `<div class="forecast__card">
                                                             <p class="forecast__card-time">${forecastHour.time.split(' ')[1]}</p>
-                                                            <img class="forecast__card-img" src="./img/weather_icon/${day}/${forecastIconNumber}" alt="weather">
+                                                            <img class="forecast__card-img" src="${getImage(forecastHour.condition.icon)}" alt="weather">
                                                             <p class="forecast__card-temp">${forecastCityTemp}°</p>
                                                         </div>`)
     }
+}
+
+// Определяем иконку погоды
+function getImage(icon) {
+    let iconNumber = icon.split('/').splice(-2);
+    return `./img/weather_icon/${iconNumber[0]}/${iconNumber[1]}`
 }
